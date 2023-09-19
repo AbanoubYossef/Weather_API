@@ -2,7 +2,6 @@ Sure, here's a README for your Django Weather App:
 
 # Django Weather App
 
-![Weather App Screenshot](screenshot.png)
 
 ## Overview
 
@@ -93,15 +92,6 @@ We welcome contributions to improve the Django Weather App. If you'd like to con
 3. Make Your Changes and Commit Them: `git commit -m 'Add new feature'`.
 4. Push to Your Forked Repository: `git push origin feature-name`.
 5. Create a Pull Request to the Main Repository.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Django](https://www.djangoproject.com/) - The web framework used for this app.
-- [OpenWeatherMap](https://openweathermap.org/) - The provider of weather data.
 
 ## Contact
 
