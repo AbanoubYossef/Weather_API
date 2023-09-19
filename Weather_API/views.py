@@ -24,9 +24,7 @@ def home(request):
                     "max_temperature": response['main']['temp_max'],
                     "min_temperature": response['main']['temp_min'],
                     "visibility": response.get('visibility', 'N/A'),  # Handle visibility if it's not present
-                    "time": response['dt'],  # Current time
-                    "sunrise": response['sys']['sunrise'],  # Sunrise time
-                    "sunset": response['sys']['sunset'],  # Sunset time
+                  
                 }
                 # Check if the city already exists in the database
                 if not City.objects.filter(name=city_name).exists():
