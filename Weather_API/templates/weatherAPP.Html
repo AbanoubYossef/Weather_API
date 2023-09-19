@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <style>
+        /* Center the card vertically and horizontally */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* Style the card */
+        .weather-card {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="weather-card">
+            <div class="content has-text-centered">
+                <h1 class="title is-4">{{ city_weather.city }}</h1>
+                <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Weather Icon">
+                <p class="subtitle is-6">{{ city_weather.description }}</p>
+            </div>
+            <table class="table is-fullwidth">
+                <tr>
+                    <th>Temperature (°F)</th>
+                    <td>{{ city_weather.temperature }}</td>
+                </tr>
+                <tr>
+                    <th>Feels Like (°F)</th>
+                    <td>{{ city_weather.feels_like }}</td>
+                </tr>
+                <tr>
+                    <th>Max Temperature (°F)</th>
+                    <td>{{ city_weather.max_temperature }}</td>
+                </tr>
+                <tr>
+                    <th>Min Temperature (°F)</th>
+                    <td>{{ city_weather.min_temperature }}</td>
+                </tr>
+                <tr>
+                    <th>Humidity (%)</th>
+                    <td>{{ city_weather.humidity }}</td>
+                </tr>
+                <tr>
+                    <th>Pressure (hPa)</th>
+                    <td>{{ city_weather.pressure }}</td>
+                </tr>
+                <tr>
+                    <th>Visibility</th>
+                    <td>{{ city_weather.visibility }}</td>
+                </tr>
+            </table>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" name="name" placeholder="Enter City Name">
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button is-info">
+                            Get Weather
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
