@@ -1,4 +1,3 @@
-Sure, here's a README for your Django Weather App:
 
 # Django Weather App
 
@@ -83,19 +82,6 @@ Follow these steps to set up and run the Django Weather App:
 3. Click the "Get Weather" button.
 4. The weather forecast for the entered city will be displayed on the page.
 
-## Contributing
-
-We welcome contributions to improve the Django Weather App. If you'd like to contribute, follow these steps:
-
-1. Fork the Repository.
-2. Create a New Branch for Your Feature or Bug Fix: `git checkout -b feature-name`.
-3. Make Your Changes and Commit Them: `git commit -m 'Add new feature'`.
-4. Push to Your Forked Repository: `git push origin feature-name`.
-5. Create a Pull Request to the Main Repository.
-
-## Contact
-
-If you have any questions or suggestions, feel free to contact the project maintainer at Youssef.MN.Abanoub@student.utcluj.ro
 
 ---
 
